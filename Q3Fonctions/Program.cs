@@ -22,7 +22,12 @@ class MainClass
             } else if(operation == "multiply") {
                 Console.WriteLine($"{number1} * {number2} = {Multiply(number1, number1)}");
             } else if(operation == "divide") {
-                Console.WriteLine($"{number1} / {number2} = {Divide(number1, number1)}");
+                if (number2 == 0) {
+                    Console.WriteLine("Pas de division par 0...");
+                } else
+                {
+                    Console.WriteLine($"{number1} / {number2} = {Divide(number1, number1)}");
+                }
             } else if(operation == "modulo") {
                 Console.WriteLine($"{number1} % {number2} = {Modulo(number1, number1)}");
             }
